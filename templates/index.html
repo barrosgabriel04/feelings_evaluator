@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de sentimentos</title>
+    <style>
+     body { background-color: #5b61d4 ;
+
+       }
+    .centro {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+    <div class="centro">
+    <h1> Avaliador de sentimentos positivos</h1>
+    <h3> Digite o texto que você deseja classificar</h3>
+    <form method="post" action= "{{ url_for ('processar_dados')}}">
+        <label for="texto"> Texto: </label>
+        <input type="text" name="texto" id="texto">
+        <input type="submit" value="Enviar">
+    </form>
+    <p style="font-size: 20px;" > Essa frase expresssa um sentimento de: {{classificacao}} </p>
+    </div>
+</body>
+</html>
